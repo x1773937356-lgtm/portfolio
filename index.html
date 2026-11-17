@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>谢廷芳 · 设计作品集 | 景观 / 建筑 / 室内</title>
+<meta name="description" content="谢廷芳个人设计作品集 2020—2026：景观设计、建筑设计、室内设计与商业空间效果图。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FBFAF7'/%3E%3Cpath d='M6 24 L16 8 L26 24' fill='none' stroke='%2335594B' stroke-width='2.5'/%3E%3Cline x1='6' y1='27' x2='26' y2='27' stroke='%231C1C1A' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{
+  --paper:#FBFAF7; --paper2:#F3F2ED; --ink:#1C1C1A; --ink2:#6E6D66;
+  --line:#E2E0D8; --accent:#35594B; --accent-soft:#E8EEE9;
+  --serif:"Noto Serif SC","Songti SC","SimSun",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --wrap:1240px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ===== 刊头 ===== */
+.masthead{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:baseline;gap:12px}
+.brand b{font-family:var(--serif);font-weight:900;font-size:22px;letter-spacing:.06em}
+.brand span{font-size:11px;letter-spacing:.28em;color:var(--ink2)}
+.nav{display:flex;gap:28px;font-size:14px;font-weight:500}
+.nav a{padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s}
+.nav a:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ===== 封面 ===== */
+.cover{border-bottom:1px solid var(--line)}
+.cover .wrap{display:grid;grid-template-columns:5fr 7fr;gap:0;align-items:stretch;padding-top:0;padding-bottom:0}
+.cover-text{padding:72px 48px 64px 0;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.issue{font-size:12px;letter-spacing:.34em;color:var(--accent);font-weight:500;margin-bottom:28px}
+.cover-name{font-family:var(--serif);font-weight:900;font-size:clamp(56px,7vw,96px);line-height:1.08;letter-spacing:.04em}
+.cover-en{font-family:var(--serif);font-weight:600;font-size:18px;color:var(--ink2);margin-top:10px;letter-spacing:.12em}
+.cover-rule{width:64px;height:3px;background:var(--ink);margin:32px 0 24px}
+.cover-tag{font-family:var(--serif);font-weight:700;font-size:24px;letter-spacing:.14em}
+.cover-tag em{font-style:normal;color:var(--accent)}
+.cover-intro{margin-top:20px;color:var(--ink2);font-size:15px;max-width:34em;font-weight:300}
+.cover-meta{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--ink2);display:flex;flex-wrap:wrap;gap:8px 24px}
+.cover-img{position:relative;min-height:480px}
+.cover-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% center}
+.cover-img figcaption{position:absolute;right:16px;bottom:12px;font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.92);text-shadow:0 1px 4px rgba(0,0,0,.45)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.cover-text>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.cover-text>*:nth-child(2){animation-delay:.08s}.cover-text>*:nth-child(3){animation-delay:.14s}
+.cover-text>*:nth-child(4){animation-delay:.2s}.cover-text>*:nth-child(5){animation-delay:.26s}
+.cover-text>*:nth-child(6){animation-delay:.32s}.cover-text>*:nth-child(7){animation-delay:.38s}
+@media (prefers-reduced-motion:reduce){.cover-text>*{animation:none}}
+
+/* ===== 章节公共 ===== */
+.section{padding:88px 0 0}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:36px}
+.sec-head h2{font-family:var(--serif);font-weight:900;font-size:32px;letter-spacing:.08em}
+.sec-head small{font-size:12px;letter-spacing:.24em;color:var(--ink2)}
+
+/* ===== 精选 ===== */
+.featured{display:block}
+.featured .f-img{overflow:hidden;aspect-ratio:21/9;background:var(--paper2)}
+.featured img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.featured:hover img{transform:scale(1.025)}
+.f-cap{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:18px 0 0;flex-wrap:wrap}
+.f-cap h3{font-family:var(--serif);font-weight:700;font-size:26px}
+.f-cap h3 span{font-size:14px;font-family:var(--sans);font-weight:400;color:var(--accent);margin-left:14px;letter-spacing:.06em}
+.f-cap p{font-size:13px;color:var(--ink2)}
+@media (prefers-reduced-motion:reduce){.featured img{transition:none}}
+
+/* ===== 作品墙 ===== */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.filters button{font-size:14px;font-weight:500;padding:7px 18px;border:1px solid var(--line);border-radius:999px;color:var(--ink2);transition:all .2s}
+.filters button:hover{border-color:var(--accent);color:var(--accent)}
+.filters button.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.filters button i{font-style:normal;font-size:12px;opacity:.65;margin-left:5px}
+.wall{display:grid;grid-template-columns:1fr 1fr;gap:44px 36px}
+.card{display:block;min-width:0}
+.card .c-img{overflow:hidden;aspect-ratio:3/2;background:var(--paper2)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.03)}
+.c-row{display:flex;gap:16px;padding-top:14px;align-items:baseline}
+.c-num{font-family:var(--serif);font-weight:600;font-size:14px;color:var(--accent);flex:none}
+.c-body{min-width:0}
+.c-body h3{font-family:var(--serif);font-weight:700;font-size:20px;line-height:1.4;transition:color .2s}
+.card:hover .c-body h3{color:var(--accent)}
+.c-body p{font-size:13px;color:var(--ink2);margin-top:3px}
+@media (prefers-reduced-motion:reduce){.card img{transition:none}}
+
+/* ===== 经历时间轴 ===== */
+.timeline{display:flex;flex-direction:column;gap:0;max-width:860px}
+.t-item{display:grid;grid-template-columns:150px 32px 1fr;gap:0 18px;padding-bottom:40px}
+.t-item:last-child{padding-bottom:0}
+.t-time{font-family:var(--serif);font-weight:700;font-size:17px;text-align:right;padding-top:1px;white-space:nowrap}
+.t-axis{position:relative;justify-self:center;width:12px}
+.t-axis::before{content:"";position:absolute;left:50%;top:9px;width:9px;height:9px;border-radius:50%;background:var(--accent);transform:translateX(-50%)}
+.t-axis::after{content:"";position:absolute;left:50%;top:24px;bottom:-46px;width:1px;background:var(--line);transform:translateX(-50%)}
+.t-item:last-child .t-axis::after{display:none}
+.t-body h3{font-family:var(--serif);font-weight:700;font-size:19px}
+.t-body h3 span{font-family:var(--sans);font-weight:400;font-size:13px;color:var(--accent);margin-left:12px}
+.t-body p{font-size:14px;color:var(--ink2);margin-top:4px;max-width:38em}
+
+/* ===== 关于 ===== */
+.about-grid{display:grid;grid-template-columns:6fr 5fr;gap:64px}
+.about-grid h3{font-family:var(--serif);font-weight:700;font-size:20px;margin-bottom:16px}
+.about-text p{font-size:15px;color:var(--ink2);margin-bottom:14px;max-width:36em}
+.about-text p b{color:var(--ink);font-weight:500}
+.skills{display:flex;flex-direction:column}
+.sk-row{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sk-row:first-of-type{border-top:1px solid var(--line)}
+.sk-row b{font-weight:500;color:var(--accent)}
+.sk-row span{color:var(--ink2);font-weight:300}
+.contact{margin-top:88px;background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.contact .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding-top:44px;padding-bottom:44px}
+.contact h2{font-family:var(--serif);font-weight:900;font-size:26px}
+.contact-links{display:flex;flex-wrap:wrap;gap:12px 40px;font-size:15px}
+.contact-links a{border-bottom:1px solid var(--ink);padding-bottom:2px;transition:color .2s,border-color .2s}
+.contact-links a:hover{color:var(--accent);border-color:var(--accent)}
+.contact-links small{display:block;font-size:11px;letter-spacing:.2em;color:var(--ink2);margin-bottom:2px}
+footer{padding:28px 0 40px;font-size:12px;color:var(--ink2)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ===== 详情页 ===== */
+#detail{display:none}
+.d-back{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--ink2);margin:40px 0 28px;transition:color .2s}
+.d-back:hover{color:var(--accent)}
+.d-back svg{width:16px;height:16px}
+.d-title{font-family:var(--serif);font-weight:900;font-size:clamp(32px,4.5vw,48px);line-height:1.25;letter-spacing:.03em}
+.d-meta{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:16px;padding-bottom:24px;border-bottom:2px solid var(--ink);font-size:13px;color:var(--ink2)}
+.d-meta b{color:var(--accent);font-weight:500}
+.d-desc{margin:28px 0 8px;max-width:42em;font-size:15px;color:var(--ink2)}
+.d-note{margin:6px 0 0;max-width:42em;font-size:14px;color:var(--ink2);padding-left:16px;border-left:2px solid var(--accent-soft)}
+.d-note b{color:var(--ink);font-weight:500}
+.d-gallery{margin-top:36px;display:flex;flex-direction:column;gap:28px}
+.d-gallery .g-full{width:100%;background:var(--paper2)}
+.g-duo{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.d-gallery img{width:100%;cursor:zoom-in;background:var(--paper2)}
+.g-cap{font-size:12px;color:var(--ink2);margin-top:8px}
+.d-pn{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin:64px 0 0;border-top:1px solid var(--line);padding-top:24px}
+.d-pn a{font-size:14px;min-width:0}
+.d-pn a small{display:block;font-size:11px;letter-spacing:.2em;color:var(--ink2);margin-bottom:4px}
+.d-pn a b{font-family:var(--serif);font-weight:700;font-size:17px;transition:color .2s}
+.d-pn a:hover b{color:var(--accent)}
+.d-pn a.next{text-align:right}
+
+/* ===== 灯箱 ===== */
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(18,18,16,.94);display:none;align-items:center;justify-content:center;flex-direction:column}
+.lightbox.open{display:flex}
+.lb-img{max-width:92vw;max-height:82vh;object-fit:contain}
+.lb-bar{display:flex;align-items:center;gap:24px;color:#D8D6CF;font-size:13px;margin-top:16px}
+.lb-bar button{color:#D8D6CF;font-size:13px;padding:6px 10px;border:1px solid rgba(255,255,255,.25);border-radius:4px;transition:background .2s}
+.lb-bar button:hover{background:rgba(255,255,255,.12)}
+.lb-close{position:absolute;top:20px;right:24px;color:#D8D6CF;font-size:15px;padding:8px 12px}
+.lb-close:hover{color:#fff}
+
+/* ===== 响应式 ===== */
+@media (max-width:960px){
+  .cover .wrap{grid-template-columns:1fr}
+  .cover-text{padding:48px 0 40px}
+  .cover-img{min-height:0;aspect-ratio:16/10}
+  .cover-img img{position:static;height:auto;aspect-ratio:16/10}
+  .about-grid{grid-template-columns:1fr;gap:44px}
+}
+@media (max-width:720px){
+  .wrap{padding:0 20px}
+  .nav{gap:16px;font-size:13px}
+  .brand span{display:none}
+  .section{padding:64px 0 0}
+  .wall{grid-template-columns:1fr;gap:36px}
+  .g-duo{grid-template-columns:1fr}
+  .t-item{grid-template-columns:24px 1fr;grid-template-rows:auto auto}
+  .t-time{grid-column:2;text-align:left;font-size:15px;padding-bottom:2px}
+  .t-axis{grid-column:1;grid-row:1/3}
+  .t-body{grid-column:2}
+  .d-pn{grid-template-columns:1fr}
+  .d-pn a.next{text-align:left}
+  .featured .f-img{aspect-ratio:16/10}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="#/" data-home><b>谢廷芳</b><span>TINFANG&nbsp;XIE</span></a>
+    <nav class="nav">
+      <a href="#/" data-scroll="works">作品</a>
+      <a href="#/" data-scroll="career">经历</a>
+      <a href="#/" data-scroll="about">关于</a>
+      <a href="#/" data-scroll="contact">联系</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== 视图：首页 ===== -->
+<main id="home">
+
+  <section class="cover">
+    <div class="wrap">
+      <div class="cover-text">
+        <p class="issue">PORTFOLIO · 2020—2026</p>
+        <h1 class="cover-name">谢廷芳</h1>
+        <p class="cover-en">Tinfang Xie · Environmental Design</p>
+        <div class="cover-rule"></div>
+        <p class="cover-tag"><em>景观</em> / <em>建筑</em> / <em>室内</em></p>
+        <p class="cover-intro">福建师范大学环境设计专业本科。自 2021 年起先后在三文建筑、星泓设计、九里规划设计院与 DCDC 参与实际项目，覆盖景观方案、小型建筑设计与室内外效果图表现。</p>
+        <div class="cover-meta"><span>基地 · 福建</span><span>优秀毕设奖</span><span>方案设计与效果表现</span></div>
+      </div>
+      <figure class="cover-img">
+        <img src="assets/p01_01.jpeg" alt="海崖小屋建筑效果图，礁石海岸上的坡顶小屋">
+        <figcaption>海崖居所系列 · 个人练习</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section wrap" id="featured">
+    <div class="sec-head"><h2>精选作品</h2><small>FEATURED</small></div>
+    <a class="featured" href="#/p/guiling">
+      <div class="f-img"><img src="assets/p29_01.jpeg" alt="桂岭茶庄园鸟瞰效果图，曲线屋面建筑悬浮于茶园之上"></div>
+      <div class="f-cap">
+        <h3>桂岭茶庄园<span>毕业设计 · 优秀毕设奖</span></h3>
+        <p>乡村振兴背景下的茶文化体验庄园 —— 从产业到空间的完整叙事</p>
+      </div>
+    </a>
+  </section>
+
+  <section class="section wrap" id="works">
+    <div class="sec-head"><h2>作品索引</h2><small>INDEX · 2020—2026</small></div>
+    <div class="filters" id="filters" role="group" aria-label="按类型筛选作品"></div>
+    <div class="wall" id="wall"></div>
+  </section>
+
+  <section class="section wrap" id="career">
+    <div class="sec-head"><h2>经历</h2><small>EXPERIENCE</small></div>
+    <div class="timeline">
+      <div class="t-item"><div class="t-time">2020 — 2024</div><div class="t-axis"></div><div class="t-body"><h3>福建师范大学<span>环境设计 · 本科</span></h3><p>主修室内空间设计、景观设计、建筑设计等；毕业设计《桂岭茶庄园》获优秀毕设奖。</p></div></div>
+      <div class="t-item"><div class="t-time">2021 — 2023</div><div class="t-axis"></div><div class="t-body"><h3>三文建筑<span>方案设计与效果表现</span></h3><p>负责小型建筑、室内、景观的方案设计与效果图绘制，含漫游动画与文本编辑。代表项目：靖安步道、厦门潮奢集合空间。</p></div></div>
+      <div class="t-item"><div class="t-time">2023 — 2024</div><div class="t-axis"></div><div class="t-body"><h3>南昌星泓设计<span>效果图绘制</span></h3><p>负责小型建筑、室内及商业效果图绘制。代表项目：华海青科办公室、新城天境、恒大华府。</p></div></div>
+      <div class="t-item"><div class="t-time">2024 — 2026</div><div class="t-axis"></div><div class="t-body"><h3>福建九里规划设计院<span>景观方案与小型建筑设计</span></h3><p>负责景观方案设计与小型建筑设计。代表项目：闽清粉干产业园、安溪福田乡知青公园、小箬乡自建房。</p></div></div>
+      <div class="t-item"><div class="t-time">2026 — 至今</div><div class="t-axis"></div><div class="t-body"><h3>DCDC<span>服装商业空间设计</span></h3><p>负责服装商业空间设计。代表项目：ARC、Wilson、安踏效果图绘制，沙驰形象开发。</p></div></div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="about">
+    <div class="sec-head"><h2>关于我</h2><small>ABOUT</small></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h3>设计之外</h3>
+        <p>性格沉稳，待人诚恳，对工作认真细心，有良好的职业道德与职业操守。</p>
+        <p>能够快速吸收新的知识与技能，并把学习成果应用到工作中；富有网感，具有创新精神，思维活跃。</p>
+        <p>在效果图表现之外，持续探索<b>生成式 AI 与设计工作流的结合</b>——ComfyUI 工作流搭建、LoRA 模型训练与 AI 辅助方案表达。</p>
+      </div>
+      <div class="skills">
+        <h3>技能</h3>
+        <div class="sk-row"><b>建模</b><span>Rhino · SketchUp · 3ds Max · 天正 CAD</span></div>
+        <div class="sk-row"><b>渲染</b><span>D5 · V-Ray · Corona · Vantage</span></div>
+        <div class="sk-row"><b>平面</b><span>Photoshop · Illustrator · InDesign</span></div>
+        <div class="sk-row"><b>生成式 AI</b><span>ComfyUI 工作流 · LoRA 训练 · AI 视频生成 · AI Agent</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>联系我</h2>
+      <div class="contact-links">
+        <a href="mailto:1773937356@qq.com"><small>EMAIL</small>1773937356@qq.com</a>
+        <a href="tel:18160985655"><small>TEL</small>181 6098 5655</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 谢廷芳 · 全部作品图片版权归本人所有</span>
+      <span>景观 / 建筑 / 室内 · PORTFOLIO 2020—2026</span>
+    </div>
+  </footer>
+</main>
+
+<!-- ===== 视图：项目详情 ===== -->
+<main id="detail" class="wrap"></main>
+
+<!-- ===== 灯箱 ===== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="图片浏览">
+  <button class="lb-close" id="lbClose">关闭 ESC</button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <div class="lb-bar">
+    <button id="lbPrev">上一张</button>
+    <span id="lbCount"></span>
+    <button id="lbNext">下一张</button>
+  </div>
+</div>
+
+<script>
+/* ===== 项目数据（图片均来自本人作品集） ===== */
+const A = "assets/";
+const PROJECTS = [
+ {id:"guiling", title:"桂岭茶庄园", sub:"毕业设计 · 优秀毕设奖", org:"福建师范大学", year:"2024", cat:"景观",
+  role:"独立设计：产业策划、景观与建筑方案、室内空间、效果表现",
+  desc:"乡村振兴背景下，针对富溪镇茶文化特色产业建设的不足，基于场地需求分析与富溪镇自身特色优势，在现有制茶产业业态基础上，以茶文化体验为主题，引入研学、采摘、民宿等可持续循环业态，打造茶文化体验庄园，形成商业价值与产业的相互支撑，推动乡村经济文化发展。",
+  notes:[["观景平台","利用场地蜿蜒的地形特征，以半挑空的结构形式，营造一个悬浮于茶园之上的观景点。"],
+         ["茶室","与展厅的全通透不同，茶室以更私密的尺度、纱帘遮蔽的若隐若现的外景与柔和光线营造氛围；曲线与有机主义元素贯穿前后节点，流动的造型与自然木纹将空间情绪渲染到极致。"]],
+  imgs:["p29_01.jpeg","p28_01.jpeg","p31_01.jpeg","p31_02.jpeg","p30_01.jpeg","p30_02.jpeg"]},
+ {id:"minqing", title:"闽清粉干产业园", org:"九里规划设计院", year:"2024—2026", cat:"景观",
+  role:"景观方案设计",
+  desc:"以“从一粒米到一碗粉”的故事为叙事线索的产业园景观设计，将粉干产业的生产过程转译为可游览、可体验的园区空间。",
+  imgs:["p04_01.jpeg","p05_01.jpeg","p05_02.jpeg","p05_03.jpeg"]},
+ {id:"anxi", title:"安溪福田乡知青公园", org:"九里规划设计院", year:"2024—2026", cat:"景观",
+  role:"景观方案设计",
+  desc:"集知青文化体验、亲子研学和网红打卡于一体的休闲农庄。",
+  imgs:["p06_01.jpeg","p07_01.jpeg","p07_06.jpeg","p07_02.jpeg","p07_03.jpeg","p07_04.jpeg","p07_05.jpeg"]},
+ {id:"jingan", title:"靖安步道", org:"三文建筑", year:"2021—2023", cat:"景观",
+  role:"节点方案设计与效果图绘制",
+  desc:"景观步道沿线节点设计：心动、同心林、浪漫咖啡馆、集散中心与爱情礼堂。",
+  imgs:["p16_01.jpeg","p17_01.jpeg","p17_02.jpeg"]},
+ {id:"xiaoruo", title:"小箬乡自建房", org:"九里规划设计院", year:"2024—2026", cat:"建筑",
+  role:"小型建筑方案设计",
+  desc:"乡村自建房建筑设计，从体量、立面到院落关系的整体推敲。",
+  imgs:["p08_01.jpeg","p09_01.jpeg","p09_02.jpeg","p09_03.jpeg","p09_04.png"]},
+ {id:"arch", title:"各类建筑项目", sub:"竞赛方案 / 公建 / 住宅", org:"三文建筑", year:"2021—2023", cat:"建筑",
+  role:"方案设计与效果图绘制",
+  desc:"竞赛方案、公建设计与住宅设计等多类型建筑项目的方案表达与效果呈现。",
+  imgs:["p20_01.jpeg","p21_01.jpeg","p21_02.jpeg","p21_03.jpeg","p21_04.jpeg"]},
+ {id:"seaside", title:"海崖居所系列", sub:"个人练习", org:"个人作品", year:"2024—2026", cat:"建筑",
+  role:"独立设计：建筑方案与效果表现",
+  desc:"礁石海岸场地上的小型居所系列效果练习，探讨建筑与粗粝海岸环境的关系。",
+  imgs:["p01_01.jpeg","p32_01.jpeg","p32_02.jpeg","p32_03.jpeg"]},
+ {id:"huahai", title:"华海青科办公空间", org:"星泓设计", year:"2023—2024", cat:"室内",
+  role:"办公空间效果图绘制",
+  desc:"高层办公空间可视化：总裁办公室、会议室、开放办公区、接待前厅与包间。",
+  imgs:["p11_03.jpeg","p10_01.jpeg","p10_02.jpeg","p11_01.jpeg","p11_02.jpeg","p11_04.jpeg","p11_05.jpeg","p11_06.jpeg","p11_07.jpeg"]},
+ {id:"xincheng", title:"新城天境家装设计", org:"星泓设计", year:"2023—2024", cat:"室内",
+  role:"家装室内设计与效果图绘制",
+  desc:"住宅家装室内设计与效果表现。",
+  imgs:["p12_01.jpeg","p13_01.jpeg","p13_08.jpeg","p13_02.jpeg","p13_03.jpeg","p13_04.jpeg","p13_05.jpeg","p13_07.jpeg"]},
+ {id:"hengda", title:"恒大华府家装效果图", org:"星泓设计", year:"2023—2024", cat:"室内",
+  role:"家装效果图绘制",
+  desc:"住宅家装空间效果图表现。",
+  imgs:["p14_01.jpeg","p15_01.jpeg","p15_02.jpeg","p15_06.jpeg","p15_03.jpeg","p15_04.jpeg","p15_05.jpeg","p15_07.png"]},
+ {id:"chaoshe", title:"潮奢集合空间", org:"三文建筑", year:"2021—2023", cat:"室内",
+  role:"方案设计与效果图绘制",
+  desc:"厦门潮奢集合空间——商业室内方案与效果表现。",
+  imgs:["p18_01.jpeg","p19_01.jpeg","p19_02.jpeg","p19_03.jpeg","p19_04.jpeg","p19_05.jpeg","p19_06.jpeg","p19_07.jpeg"]},
+ {id:"arc", title:"ARC-V3.5 形象", org:"DCDC", year:"2026", cat:"商业空间",
+  role:"店铺形象效果图绘制",
+  desc:"ARC-V3.5 店铺形象开发——黑龙江省佳木斯市新颖户外。",
+  imgs:["p22_01.jpeg","p23_01.png","p23_02.jpeg","p23_03.jpeg","p23_04.jpeg","p23_05.jpeg","p23_06.jpeg","p23_07.jpeg"]},
+ {id:"anta", title:"安踏 · Hung Vuong Plaza", org:"DCDC", year:"2026", cat:"商业空间",
+  role:"店铺空间效果图绘制",
+  desc:"安踏 Hung Vuong Plaza 店铺空间效果表现。",
+  imgs:["p24_01.jpeg","p25_01.png","p25_02.jpeg","p25_03.jpeg","p25_04.jpeg","p25_05.jpeg","p25_06.jpeg","p25_07.jpeg"]},
+ {id:"satchi", title:"沙驰形象开发", org:"DCDC", year:"2026", cat:"商业空间",
+  role:"店铺形象开发与效果表现",
+  desc:"沙驰品牌店铺形象开发与效果呈现。",
+  imgs:["p26_01.jpeg","p27_01.jpeg","p27_02.jpeg","p27_03.jpeg","p27_04.jpeg","p27_05.jpeg"]}
+];
+const CATS = ["全部","景观","建筑","室内","商业空间"];
+let curCat = "全部";
+let pendingScroll = null;
+
+const $ = s => document.querySelector(s);
+const home = $("#home"), detail = $("#detail");
+
+/* ===== 作品墙 ===== */
+function renderFilters(){
+  const box = $("#filters"); box.innerHTML = "";
+  CATS.forEach(c=>{
+    const n = c==="全部" ? PROJECTS.length : PROJECTS.filter(p=>p.cat===c).length;
+    const b = document.createElement("button");
+    b.innerHTML = c + "<i>" + n + "</i>";
+    if(c===curCat) b.classList.add("on");
+    b.setAttribute("aria-pressed", c===curCat ? "true":"false");
+    b.onclick = ()=>{ curCat=c; renderFilters(); renderWall(); };
+    box.appendChild(b);
+  });
+}
+function renderWall(){
+  const wall = $("#wall"); wall.innerHTML = "";
+  PROJECTS.forEach((p,i)=>{
+    if(curCat!=="全部" && p.cat!==curCat) return;
+    const a = document.createElement("a");
+    a.className = "card"; a.href = "#/p/"+p.id;
+    const fig = document.createElement("div"); fig.className="c-img";
+    const img = document.createElement("img");
+    img.src = A + p.imgs[0]; img.alt = p.title + " 效果图"; img.loading = "lazy";
+    fig.appendChild(img);
+    const row = document.createElement("div"); row.className="c-row";
+    const num = document.createElement("span"); num.className="c-num";
+    num.textContent = String(i+1).padStart(2,"0");
+    const body = document.createElement("div"); body.className="c-body";
+    const h = document.createElement("h3"); h.textContent = p.title;
+    const meta = document.createElement("p");
+    meta.textContent = p.org + " · " + p.cat + " · " + p.year;
+    body.appendChild(h); body.appendChild(meta);
+    row.appendChild(num); row.appendChild(body);
+    a.appendChild(fig); a.appendChild(row);
+    wall.appendChild(a);
+  });
+}
+
+/* ===== 详情页 ===== */
+function renderDetail(id){
+  const idx = PROJECTS.findIndex(p=>p.id===id);
+  if(idx<0){ location.hash="#/"; return; }
+  const p = PROJECTS[idx];
+  detail.innerHTML = "";
+  const back = document.createElement("a");
+  back.className="d-back"; back.href="#/"; back.dataset.scroll="works";
+  back.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5 L8 12 L15 19"/></svg>返回作品索引';
+  const h1 = document.createElement("h1"); h1.className="d-title";
+  h1.textContent = p.title + (p.sub ? "　"+p.sub : "");
+  const meta = document.createElement("div"); meta.className="d-meta";
+  meta.innerHTML = "<span>机构　<b>"+p.org+"</b></span><span>年份　<b>"+p.year+"</b></span><span>类型　<b>"+p.cat+"</b></span><span>职责　<b>"+p.role+"</b></span>";
+  const desc = document.createElement("p"); desc.className="d-desc"; desc.textContent = p.desc;
+  detail.append(back,h1,meta,desc);
+  (p.notes||[]).forEach(n=>{
+    const el = document.createElement("p"); el.className="d-note";
+    const b = document.createElement("b"); b.textContent = n[0]+"　";
+    el.appendChild(b); el.appendChild(document.createTextNode(n[1]));
+    detail.appendChild(el);
+  });
+  const gal = document.createElement("div"); gal.className="d-gallery";
+  const imgs = p.imgs.map(f=>A+f);
+  const mkImg = (src,i)=>{
+    const im = document.createElement("img");
+    im.src = src; im.alt = p.title+" 图"+(i+1); im.loading="lazy";
+    im.onclick = ()=>openLB(imgs,i);
+    return im;
+  };
+  const first = mkImg(imgs[0],0); first.className="g-full"; gal.appendChild(first);
+  for(let i=1;i<imgs.length;i+=2){
+    if(i+1<imgs.length){
+      const duo = document.createElement("div"); duo.className="g-duo";
+      duo.appendChild(mkImg(imgs[i],i)); duo.appendChild(mkImg(imgs[i+1],i+1));
+      gal.appendChild(duo);
+    }else{
+      const im = mkImg(imgs[i],i); im.className="g-full"; gal.appendChild(im);
+    }
+  }
+  detail.appendChild(gal);
+  const pn = document.createElement("div"); pn.className="d-pn";
+  const prev = PROJECTS[(idx-1+PROJECTS.length)%PROJECTS.length];
+  const next = PROJECTS[(idx+1)%PROJECTS.length];
+  const pa = document.createElement("a"); pa.href="#/p/"+prev.id;
+  pa.innerHTML = "<small>上一个项目</small>"; const pb=document.createElement("b"); pb.textContent=prev.title; pa.appendChild(pb);
+  const na = document.createElement("a"); na.href="#/p/"+next.id; na.className="next";
+  na.innerHTML = "<small>下一个项目</small>"; const nb=document.createElement("b"); nb.textContent=next.title; na.appendChild(nb);
+  pn.append(pa,na); detail.appendChild(pn);
+  document.title = p.title + " · 谢廷芳作品集";
+}
+
+/* ===== 灯箱 ===== */
+let lbList=[], lbIdx=0;
+const lb=$("#lightbox"), lbImg=$("#lbImg"), lbCount=$("#lbCount");
+function openLB(list,i){ lbList=list; lbIdx=i; updLB(); lb.classList.add("open"); document.body.style.overflow="hidden"; }
+function updLB(){ lbImg.src=lbList[lbIdx]; lbCount.textContent=(lbIdx+1)+" / "+lbList.length; }
+function closeLB(){ lb.classList.remove("open"); document.body.style.overflow=""; }
+function stepLB(d){ lbIdx=(lbIdx+d+lbList.length)%lbList.length; updLB(); }
+$("#lbClose").onclick=closeLB; $("#lbPrev").onclick=()=>stepLB(-1); $("#lbNext").onclick=()=>stepLB(1);
+lb.onclick=e=>{ if(e.target===lb) closeLB(); };
+document.addEventListener("keydown",e=>{
+  if(!lb.classList.contains("open")) return;
+  if(e.key==="Escape") closeLB();
+  if(e.key==="ArrowLeft") stepLB(-1);
+  if(e.key==="ArrowRight") stepLB(1);
+});
+
+/* ===== 路由 ===== */
+function route(){
+  closeLB();
+  const h = location.hash;
+  if(h.startsWith("#/p/")){
+    home.style.display="none"; detail.style.display="block";
+    renderDetail(h.slice(4));
+    window.scrollTo(0,0);
+  }else{
+    detail.style.display="none"; home.style.display="block";
+    document.title = "谢廷芳 · 设计作品集 | 景观 / 建筑 / 室内";
+    if(pendingScroll){
+      const el = document.getElementById(pendingScroll);
+      pendingScroll=null;
+      if(el){ el.scrollIntoView({behavior:"smooth"}); return; }
+    }
+    if(h==="#/"||h==="") window.scrollTo(0,0);
+  }
+}
+window.addEventListener("hashchange",route);
+document.querySelectorAll("[data-scroll]").forEach(a=>{
+  a.addEventListener("click",e=>{
+    e.preventDefault();
+    pendingScroll = a.dataset.scroll;
+    if(location.hash.startsWith("#/p/")){ location.hash="#/"; }
+    else{ const el=document.getElementById(pendingScroll); pendingScroll=null; if(el) el.scrollIntoView({behavior:"smooth"}); }
+  });
+});
+document.querySelector("[data-home]").addEventListener("click",e=>{
+  e.preventDefault();
+  if(location.hash.startsWith("#/p/")) location.hash="#/";
+  else window.scrollTo({top:0,behavior:"smooth"});
+});
+
+renderFilters(); renderWall(); route();
+</script>
+</body>
+</html>
